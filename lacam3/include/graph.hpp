@@ -3,7 +3,7 @@
  */
 #pragma once
 #include "utils.hpp"
-
+using uint = unsigned int;
 struct Vertex {
   const int id;     // index for V in Graph
   const int index;  // index for U (width * y + x) in Graph
@@ -43,7 +43,7 @@ bool is_same_config(
 // c.f.
 // https://stackoverflow.com/questions/10405030/c-unordered-map-fail-when-used-with-a-vector-as-key
 struct ConfigHasher {
-  uint operator()(const Config &C) const;
+    uint operator()(const Config &C) const;
 };
 
 std::ostream &operator<<(std::ostream &os, const Vertex *v);
